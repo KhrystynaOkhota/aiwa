@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>Aiwa</title>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css"/>
+
+</head>
+<body class="page-template-default home">
+<div id="loader-wrapper"></div>
+
+<img src="assets/img/decor-mob.svg" alt="" class="decor-mob d-block d-md-none">
+
+<!--
+<img src="assets/img/decor-1.svg" alt="" class="decor">
+<img src="assets/img/decor-21.svg" alt="" class="decor">
+<img src="assets/img/decor-22.svg" alt="" class="decor">
+<img src="assets/img/decor-3.svg" alt="" class="decor">-->
+
+<header class="header">
+    <div class="header-main align-middle align-justify container overlap">
+
+        <a href="index.html" class="header-logo align-middle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="31" viewBox="0 0 80 31" fill="none"
+                 class="header-logo__icon">
+                <path d="M7.9749 0.108892C7.6568 0.242638 6.13971 2.46767 5.45457 3.81729C3.85184 6.97854 2.4938 11.2827 1.45386 16.4015C0.377214 21.7392 -0.0754662 25.557 0.010176 28.5115C0.0835836 30.8825 0.352745 31.4904 0.964475 30.6272C1.77196 29.5086 2.98318 25.8123 4.39016 20.2315L5.08753 17.435L5.51575 17.3985C5.91949 17.362 11.1192 18.0672 14.0555 18.5658L15.3401 18.7725L16.9429 22.7362C19.0472 27.9522 19.2185 28.2441 20.185 28.1711C20.6622 28.1346 20.7478 28.086 20.9436 27.7091C21.3963 26.8458 20.9313 24.5357 19.3653 19.8667C15.7806 9.17926 11.7309 1.14238 9.44305 0.157526C9.00261 -0.0370121 8.37864 -0.0491714 7.9749 0.108892ZM11.0336 6.45572C12.9911 10.3708 13.7496 12.4986 13.8964 14.4804L13.9699 15.4288H12.1469C9.12495 15.4167 7.86479 15.1249 7.03284 14.2129C6.29876 13.3983 6.29876 12.3284 7.0206 9.78719C7.91373 6.61378 9.12495 3.63491 9.51646 3.63491C9.57763 3.63491 10.2505 4.91157 11.0336 6.45572Z"
+                      fill="#151515"/>
+                <path d="M57.0847 3.27012C56.1671 4.07259 55.8245 5.89639 55.6532 10.9909C55.4085 18.0429 55.1638 20.3044 54.5031 21.6176C54.3196 21.958 53.7935 22.6389 53.3286 23.1252L52.4844 24.0007L52.0685 23.5994C51.2854 22.8456 49.2667 18.3469 47.5784 13.605C47.0156 12.0365 46.4528 10.6261 46.3304 10.4924C45.8655 9.96955 44.6665 10.0303 44.0548 10.5896C43.2351 11.3556 42.8069 12.8755 42.3787 16.5595C41.7302 22.189 41.5222 23.2468 40.8126 24.5843C40.4089 25.3503 39.7482 26.0068 39.3812 26.0068C39.2588 26.0068 38.9652 25.7758 38.7205 25.5083C37.7417 24.3654 36.6529 21.7635 35.2704 17.2891C33.3128 10.9179 32.7378 9.38593 32.1261 8.89958C31.7468 8.60778 31.3063 8.65641 30.976 9.00901C30.6334 9.39809 30.6946 11.8055 31.1228 14.2737C31.9915 19.3925 33.6432 24.2681 35.4416 27.0525C36.1512 28.1589 37.4726 29.4964 38.2434 29.8855C39.0141 30.2745 39.9073 30.4326 40.3967 30.2745C42.085 29.7152 43.7612 25.2044 45.058 17.7025C45.1314 17.2891 45.1681 17.2526 45.5597 17.2526C46.5017 17.2526 47.1746 18.359 48.3002 21.7391C48.7162 22.9672 49.279 24.4141 49.5604 24.949C50.1599 26.0798 51.1386 27.1254 51.8115 27.3443C52.5211 27.5753 53.818 27.4416 54.4664 27.0525C56.5708 25.8366 58.1246 21.5811 58.7119 15.4288C58.9565 12.7904 59.0789 8.85095 59.0055 6.21252L58.9198 3.50114L58.565 3.20933C58.0757 2.79593 57.5985 2.82025 57.0847 3.27012Z"
+                      fill="#151515"/>
+                <path d="M24.4549 5.31269C23.9656 5.54371 23.6352 6.12732 23.5741 6.85685L23.5374 7.34319L24.3326 7.54989C25.6172 7.89033 26.5348 7.635 26.5348 6.94196C26.5348 6.45561 26.1556 5.8112 25.6417 5.44644C25.0667 5.03304 25.0177 5.03304 24.4549 5.31269Z"
+                      fill="#151515"/>
+                <path d="M70.3959 10.9423C68.1325 11.2341 65.7468 12.8147 63.936 15.2343C63.0551 16.4258 62.0152 18.5171 61.5748 19.9883C61.1465 21.4474 61.0242 23.8426 61.3301 25.1801C61.7583 27.089 62.5902 28.2805 63.9727 28.9736C65.0861 29.5207 66.2361 29.7031 68.0102 29.618C70.2613 29.5086 71.2523 29.1073 73.8216 27.2957C74.6902 26.6756 75.4855 26.1285 75.5589 26.0798C75.669 26.019 75.7791 26.1649 75.9259 26.5175C76.0361 26.8093 76.452 27.6848 76.8435 28.4751C78.2383 31.2959 78.7399 31.5512 79.6086 29.922L80.0001 29.2046L79.6453 28.2441C79.1926 27.016 78.9724 25.6421 78.6543 22.2742C78.3117 18.4685 78.0792 16.9851 77.6633 15.7328C77.2228 14.4197 76.8435 13.7509 76.0972 12.9485C75.1185 11.9028 73.6625 11.1855 72.1699 10.9909C71.8641 10.9423 71.5093 10.8936 71.3747 10.8815C71.2401 10.8572 70.7996 10.8936 70.3959 10.9423ZM73.0263 13.909C73.5647 14.1886 74.0908 15.3802 74.262 16.7055C74.47 18.3104 74.3477 21.2285 74.0173 22.2377C73.5035 23.8669 72.2433 25.2895 70.6406 26.0677C69.4783 26.6391 68.524 26.858 67.2149 26.858C64.8292 26.858 63.9727 25.8731 63.9727 23.1617C63.9727 20.4504 65.0127 18.0429 67.0926 15.9638C68.0102 15.0398 68.3772 14.7723 69.2458 14.3467C70.7507 13.6293 72.1577 13.4591 73.0263 13.909Z"
+                      fill="#151515"/>
+                <path d="M26.0943 13.4712C25.6906 13.6779 25.2257 13.9819 25.0544 14.1643L24.7607 14.4804V18.2618C24.773 22.42 24.9443 24.4748 25.4948 26.6512C25.9842 28.6331 26.7305 29.8854 27.6359 30.2624C28.1742 30.4812 29.1897 30.3596 29.5078 30.0313C29.7525 29.7882 29.7769 29.6544 29.7647 28.2197C29.7647 26.4324 29.7035 26.1406 28.3699 20.657C27.4524 16.9121 27.1465 15.4288 26.9385 13.8117L26.8406 13.1065L26.0943 13.4712Z"
+                      fill="#151515"/>
+            </svg>
+
+        </a>
+
+
+        <div class="navbar">
+            <nav class="main-navigation">
+                <ul class="menu">
+                    <li class="menu-item  current-menu-item">
+                        <a href="#home">Ask Aiwa</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#characteristics">Characteristics</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#content">Free trial</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#content">Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="d-flex align-middle align-right">
+
+            <div class="lang__wrap --relative">
+                <div class="lang__current">
+                    <a href="/uk/">Eng</a><!--поточна мова-->
+                </div>
+
+                <ul class="lang">
+                    <li class="lang-item"><a href="">Eng</a>
+                    </li>
+                    <li class="lang-item "><a href="">Ita</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="" class="btn btn-primary text-semiBold text-m">Meet Aiwa</a>
+        </div>
+    </div>
+
+</header>
+
+<main class="main --relative">
+
+    <section class="s-banner --relative " id="home">
+        <img src="assets/img/decor-1.svg" alt="" class="decor decor-1">
+        <div class="container overlap s-banner__inner">
+            <div class=" row align-middle m-row full-height">
+                <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h1 class="heading text-semiBold ">Ask Aiwa what it can do</h1>
+                    <div class="text text-m text-medium ">The only hybrid system that
+                        answers all your questions about your work and
+                        your business.
+                    </div>
+                    <div class="btn__wrap d-flex align-middle align-left">
+                        <button class="btn btn-primary text-semiBold text-m">Call us</button>
+                        <button class="btn btn-transparent text-semiBold text-m">Learn about Aiwa</button>
+                    </div>
+
+                </div>
+                <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+                    <div class="s-banner__img--wrap --relative  d-flex align-justify">
+                        <img src="assets/img/banner1.png" alt="" class="s-banner__img">
+                        <img src="assets/img/banner2.png" alt="" class="s-banner__img">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="btn-scroll scroll-to-content">
+            <div class="">Scroll down</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <path d="M12.1875 7.5L7.5 12.1875L2.8125 7.5" stroke="#757575" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                <path d="M12.1875 2.8125L7.5 7.5L2.8125 2.8125" stroke="#757575" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+
+    </section>
+
+    <div class="main__inner --relative" >
+
+        <div class="decor decor-2">
+            <img src="assets/img/decor-21.svg" alt="" class="decor-21">
+            <img src="assets/img/decor-22.svg" alt="" class="decor-22">
+        </div>
+
+        <section class="s-benefits" id="characteristics">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="heading__wrap d-flex align-center">
+                            <h2 class="heading  --relative">Our benefits</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="swiper-entry">
+                            <div class="swiper-container"
+                                 data-options='{ "slidesPerView": 1, "spaceBetween": 0,
+
+                        "breakpoints":{"768":{"slidesPerView": 2, "spaceBetween": 0},
+                        "992":{"spaceBetween": 0, "slidesPerView": 3},
+                        "1200":{"spaceBetween":0, "slidesPerView": 3},
+                        "1400":{"spaceBetween": 0, "slidesPerView": 3}}}'>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="benefit-card default-card">
+                                            <div class="benefit-card__img--wrap d-flex align-middle align-center">
+                                                <img src="assets/img/ClipboardText.svg" alt=""
+                                                     class="benefit-card__img">
+                                            </div>
+                                            <h4 class="benefit-card__title default-card__title">Characteristics</h4>
+                                            <div class="benefit-card__description text-m overlap">Lorem ipsum dolor sit
+                                                amet, consectetur
+                                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                magna
+                                                aliqua.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="benefit-card default-card">
+                                            <div class="benefit-card__img--wrap d-flex align-middle align-center">
+                                                <img src="assets/img/LightbulbFilament.svg" alt=""
+                                                     class="benefit-card__img">
+                                            </div>
+                                            <h4 class="benefit-card__title default-card__title">Potential</h4>
+                                            <div class="benefit-card__description text-m overlap">Lorem ipsum dolor sit
+                                                amet, consectetur
+                                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                magna
+                                                aliqua.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="benefit-card default-card">
+                                            <div class="benefit-card__img--wrap d-flex align-middle align-center">
+                                                <img src="assets/img/Laptop.svg" alt="" class="benefit-card__img">
+                                            </div>
+                                            <h4 class="benefit-card__title default-card__title">Usability</h4>
+                                            <div class="benefit-card__description text-m overlap">Lorem ipsum dolor sit
+                                                amet, consectetur
+                                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                magna
+                                                aliqua.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-pagination d-flex d-md-none"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="" id="content">
+            <div class="container">
+                <div class="row m-row align-center">
+                    <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+                        <div class="default-card large mb-50">
+                            <div>
+                                <h4 class="default-card__title">1 Month Free trial</h4>
+                                <div class="benefit-card__description text-m overlap">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Sit
+                                    amet
+                                    tellus cras adipiscing enim eu turpis.
+                                </div>
+
+                                <ul class="default-card__list text-left">
+                                    <li>
+                                        <div class="img__wrap d-flex align-middle align-center"><img
+                                                src="assets/img/Notepad.svg" alt=""></div>
+
+                                        <span class="text-m">Use AiWa to the fullest within a month</span>
+                                    </li>
+                                    <li>
+                                        <div class="img__wrap d-flex align-middle align-center"><img
+                                                src="assets/img/Notepad.svg" alt=""></div>
+                                        <span class="text-m">Post information about your company on AiWa</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-free-trial d-flex align-middle align-center text-m text-semiBold"><p>
+                                Start my free trial now <span class="text-normal">Free for 1 month</span></p></button>
+                        </div>
+                    </div>
+                    <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+                        <div class="default-card large mb-50">
+                            <div>
+                                <h4 class="default-card__title">Contact us</h4>
+                                <div class="benefit-card__description text-m overlap">Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Sit
+                                    amet
+                                    tellus cras adipiscing enim eu turpis.
+                                </div>
+
+
+                            </div>
+
+                            <button class="btn btn-green d-flex align-middle align-center text-m text-semiBold"><img
+                                    src="assets/img/Whatsapp.svg" alt=""> Message us now on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container ">
+        <div class="row align-center">
+            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 d-flex align-left align-end">
+                <a href="index.html" class=" logo__wrap align-middle --relative">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="31" viewBox="0 0 80 31" fill="none"
+                         class="logo__icon">
+                        <path d="M7.9749 0.108892C7.6568 0.242638 6.13971 2.46767 5.45457 3.81729C3.85184 6.97854 2.4938 11.2827 1.45386 16.4015C0.377214 21.7392 -0.0754662 25.557 0.010176 28.5115C0.0835836 30.8825 0.352745 31.4904 0.964475 30.6272C1.77196 29.5086 2.98318 25.8123 4.39016 20.2315L5.08753 17.435L5.51575 17.3985C5.91949 17.362 11.1192 18.0672 14.0555 18.5658L15.3401 18.7725L16.9429 22.7362C19.0472 27.9522 19.2185 28.2441 20.185 28.1711C20.6622 28.1346 20.7478 28.086 20.9436 27.7091C21.3963 26.8458 20.9313 24.5357 19.3653 19.8667C15.7806 9.17926 11.7309 1.14238 9.44305 0.157526C9.00261 -0.0370121 8.37864 -0.0491714 7.9749 0.108892ZM11.0336 6.45572C12.9911 10.3708 13.7496 12.4986 13.8964 14.4804L13.9699 15.4288H12.1469C9.12495 15.4167 7.86479 15.1249 7.03284 14.2129C6.29876 13.3983 6.29876 12.3284 7.0206 9.78719C7.91373 6.61378 9.12495 3.63491 9.51646 3.63491C9.57763 3.63491 10.2505 4.91157 11.0336 6.45572Z"
+                              fill="#151515"/>
+                        <path d="M57.0847 3.27012C56.1671 4.07259 55.8245 5.89639 55.6532 10.9909C55.4085 18.0429 55.1638 20.3044 54.5031 21.6176C54.3196 21.958 53.7935 22.6389 53.3286 23.1252L52.4844 24.0007L52.0685 23.5994C51.2854 22.8456 49.2667 18.3469 47.5784 13.605C47.0156 12.0365 46.4528 10.6261 46.3304 10.4924C45.8655 9.96955 44.6665 10.0303 44.0548 10.5896C43.2351 11.3556 42.8069 12.8755 42.3787 16.5595C41.7302 22.189 41.5222 23.2468 40.8126 24.5843C40.4089 25.3503 39.7482 26.0068 39.3812 26.0068C39.2588 26.0068 38.9652 25.7758 38.7205 25.5083C37.7417 24.3654 36.6529 21.7635 35.2704 17.2891C33.3128 10.9179 32.7378 9.38593 32.1261 8.89958C31.7468 8.60778 31.3063 8.65641 30.976 9.00901C30.6334 9.39809 30.6946 11.8055 31.1228 14.2737C31.9915 19.3925 33.6432 24.2681 35.4416 27.0525C36.1512 28.1589 37.4726 29.4964 38.2434 29.8855C39.0141 30.2745 39.9073 30.4326 40.3967 30.2745C42.085 29.7152 43.7612 25.2044 45.058 17.7025C45.1314 17.2891 45.1681 17.2526 45.5597 17.2526C46.5017 17.2526 47.1746 18.359 48.3002 21.7391C48.7162 22.9672 49.279 24.4141 49.5604 24.949C50.1599 26.0798 51.1386 27.1254 51.8115 27.3443C52.5211 27.5753 53.818 27.4416 54.4664 27.0525C56.5708 25.8366 58.1246 21.5811 58.7119 15.4288C58.9565 12.7904 59.0789 8.85095 59.0055 6.21252L58.9198 3.50114L58.565 3.20933C58.0757 2.79593 57.5985 2.82025 57.0847 3.27012Z"
+                              fill="#151515"/>
+                        <path d="M24.4549 5.31269C23.9656 5.54371 23.6352 6.12732 23.5741 6.85685L23.5374 7.34319L24.3326 7.54989C25.6172 7.89033 26.5348 7.635 26.5348 6.94196C26.5348 6.45561 26.1556 5.8112 25.6417 5.44644C25.0667 5.03304 25.0177 5.03304 24.4549 5.31269Z"
+                              fill="#151515"/>
+                        <path d="M70.3959 10.9423C68.1325 11.2341 65.7468 12.8147 63.936 15.2343C63.0551 16.4258 62.0152 18.5171 61.5748 19.9883C61.1465 21.4474 61.0242 23.8426 61.3301 25.1801C61.7583 27.089 62.5902 28.2805 63.9727 28.9736C65.0861 29.5207 66.2361 29.7031 68.0102 29.618C70.2613 29.5086 71.2523 29.1073 73.8216 27.2957C74.6902 26.6756 75.4855 26.1285 75.5589 26.0798C75.669 26.019 75.7791 26.1649 75.9259 26.5175C76.0361 26.8093 76.452 27.6848 76.8435 28.4751C78.2383 31.2959 78.7399 31.5512 79.6086 29.922L80.0001 29.2046L79.6453 28.2441C79.1926 27.016 78.9724 25.6421 78.6543 22.2742C78.3117 18.4685 78.0792 16.9851 77.6633 15.7328C77.2228 14.4197 76.8435 13.7509 76.0972 12.9485C75.1185 11.9028 73.6625 11.1855 72.1699 10.9909C71.8641 10.9423 71.5093 10.8936 71.3747 10.8815C71.2401 10.8572 70.7996 10.8936 70.3959 10.9423ZM73.0263 13.909C73.5647 14.1886 74.0908 15.3802 74.262 16.7055C74.47 18.3104 74.3477 21.2285 74.0173 22.2377C73.5035 23.8669 72.2433 25.2895 70.6406 26.0677C69.4783 26.6391 68.524 26.858 67.2149 26.858C64.8292 26.858 63.9727 25.8731 63.9727 23.1617C63.9727 20.4504 65.0127 18.0429 67.0926 15.9638C68.0102 15.0398 68.3772 14.7723 69.2458 14.3467C70.7507 13.6293 72.1577 13.4591 73.0263 13.909Z"
+                              fill="#151515"/>
+                        <path d="M26.0943 13.4712C25.6906 13.6779 25.2257 13.9819 25.0544 14.1643L24.7607 14.4804V18.2618C24.773 22.42 24.9443 24.4748 25.4948 26.6512C25.9842 28.6331 26.7305 29.8854 27.6359 30.2624C28.1742 30.4812 29.1897 30.3596 29.5078 30.0313C29.7525 29.7882 29.7769 29.6544 29.7647 28.2197C29.7647 26.4324 29.7035 26.1406 28.3699 20.657C27.4524 16.9121 27.1465 15.4288 26.9385 13.8117L26.8406 13.1065L26.0943 13.4712Z"
+                              fill="#151515"/>
+                    </svg>
+                </a>
+
+                <div class="copyright">© 2023 AiWa. All rights reserved.</div>
+            </div>
+
+            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <div class="footer-item">
+                    <ul class="menu">
+                        <li class="menu-item  current-menu-item">
+                            <a href="#home">Ask Aiwa</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#characteristics">Characteristics</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#content">Free trial</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#content">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-xs-6 ">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="" target="_blank">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="./assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+<script src="assets/js/js_app.min.js"></script>
+<script>
+    //anchor scroll
+    $(function () {
+        $('a[href*="#"]:not([href="#"])').click(function () {
+            $('.menu-item').removeClass('current-menu-item');
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    $(this).parents('.menu-item').addClass('current-menu-item');
+
+
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(function () {
+
+        var body = $('body');
+        $('.lang__current').on('click', function (e) {
+
+            e.preventDefault();
+            $('.lang__wrap').toggleClass('open');
+        });
+
+        body.on('click', function (e) {
+            if (!$(e.target).closest('.lang__wrap').length) {
+                $('.lang__wrap').removeClass('open');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
