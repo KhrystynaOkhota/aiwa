@@ -89,27 +89,47 @@
     <section class="s-banner --relative " id="home">
         <img src="assets/img/decor-1.svg" alt="" class="decor decor-1">
         <div class="container overlap s-banner__inner">
-            <div class=" row align-middle m-row full-height">
+            <div class=" row align-center m-row text-center">
                 <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <h1 class="heading text-semiBold ">Ask Aiwa what it can do</h1>
-                    <div class="text text-m text-medium ">The only hybrid system that
-                        answers all your questions about your work and
-                        your business.
+                    <div class="text text-m text-medium ">The only hybrid system that answers all your questions about
+                        your work and your business.
                     </div>
-                    <div class="btn__wrap d-flex align-middle align-left">
-                        <button class="btn btn-primary text-semiBold text-m">Call us</button>
-                        <button class="btn btn-transparent text-semiBold text-m">Learn about Aiwa</button>
-                    </div>
-
-                </div>
-                <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-                    <div class="s-banner__img--wrap --relative  d-flex align-justify">
-                        <img src="assets/img/banner1.png" alt="" class="s-banner__img">
-                        <img src="assets/img/banner2.png" alt="" class="s-banner__img">
+                    <div class="btn__wrap d-flex align-middle align-center">
+                        <a href="#" class="btn btn-primary text-semiBold text-m">Call us</a>
+                        <a href="#characteristics" class="btn btn-transparent text-semiBold text-m">Learn about Aiwa</a>
                     </div>
                 </div>
             </div>
 
+            <div class=" row align-center m-row text-center">
+
+                <div class="column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex align-justify">
+
+
+
+                    <div class="s-banner__item">
+
+                        <video  muted playsinline loop >
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                            Your browser does not support HTML5 video.
+                        </video>
+
+                        <img src="assets/img/banner1.png" alt="" class="s-banner__block--img">
+                    </div>
+                    <div class="s-banner__item">
+
+                        <video  muted playsinline loop >
+                            <source src="assets/img/test.mp4" type="video/mp4">
+                            <source src="" type="video/ogg">
+                            Your browser does not support HTML5 video.
+                        </video>
+
+                        <img src="assets/img/banner1.png" alt="" class="s-banner__block--img">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="btn-scroll scroll-to-content">
@@ -125,7 +145,7 @@
 
     </section>
 
-    <div class="main__inner --relative" >
+    <div class="main__inner --relative">
         <!--<img src="assets/img/decor-mob-white.svg" alt="" class="decor-mob-white d-block d-md-none">-->
         <div class="decor decor-2">
             <img src="assets/img/decor-21.svg" alt="" class="decor-21">
@@ -364,5 +384,36 @@
     });
 </script>
 
+
+
+
+
+<script>
+
+    window.addEventListener('scroll', videoScroll);
+
+    function videoScroll() {
+
+        if ( document.querySelectorAll('video').length > 0) {
+            var windowHeight = window.innerHeight,
+                videoEl = document.querySelectorAll('video');
+
+            for (var i = 0; i < videoEl.length; i++) {
+
+                var thisVideoEl = videoEl[i],
+                    videoHeight = thisVideoEl.clientHeight,
+                    videoClientRect = thisVideoEl.getBoundingClientRect().top;
+
+                if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
+                    thisVideoEl.play();
+                } else {
+                    thisVideoEl.pause();
+                }
+
+            }
+        }
+
+    }
+</script>
 </body>
 </html>
