@@ -361,7 +361,7 @@
 
 <script src="assets/js/js_app.min.js"></script>
 
-
+<img id="img-tag" src="assets/img/test-2.mp4">
 <script>
 
     function videoplay() {
@@ -370,7 +370,7 @@
         document.getElementById('video2').play();
     }
 
-    $(function () {
+    (function () {
 
         document.getElementById('btn-trigger').addEventListener('click', () => {
             videoplay();
@@ -380,10 +380,9 @@
 
 
         $("#btn-trigger").trigger("click");
-    });
+    })();
 
 
-   
 </script>
 
 </body>
