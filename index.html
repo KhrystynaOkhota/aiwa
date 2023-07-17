@@ -85,7 +85,8 @@
         <div class="container overlap s-banner__inner">
             <div class=" row align-center m-row text-center">
                 <div class="column col-xl-6 col-lg-8 col-md-10 col-sm-12 col-xs-12">
-                    <h1 class="heading text-semiBold d-flex align-center align-middle">Ask <img src="assets/img/Aiwa.svg" alt=""> what it can do</h1>
+                    <h1 class="heading text-semiBold d-flex align-center align-middle">Ask <img
+                            src="assets/img/Aiwa.svg" alt=""> what it can do</h1>
                     <div class="text text-m text-medium ">The only hybrid system that answers all your questions about
                         your work and your business.
                     </div>
@@ -102,10 +103,12 @@
 
 
                         <!--або video-block -->
-                       <div class="video-block ">
-                           <video  height="100%" loop="loop" autoplay="autoplay" muted="" playsinline="" style="display: block;height: 100%;object-fit: cover;object-position: center;">
-                               <source src="assets/img/test-2.mp4" type="video/mp4">
-                           </video>
+                        <div class="video-block ">
+                            <video height="100%" loop="loop" muted="" playsinline=""
+                                   style="display: block;height: 100%;object-fit: cover;object-position: center;"
+                                   id="video1">
+                                <source src="assets/img/test-2.mp4" type="video/mp4">
+                            </video>
                             <img src="assets/img/video-bg.png" alt="" class="video-block__img ">
                             <img src="assets/img/tel.png" alt="" class="video-block__bg ">
                         </div>
@@ -119,7 +122,9 @@
                     </div>
                     <div class="s-banner__item --relative">
                         <div class="video-block">
-                            <video  height="100%" loop="loop" autoplay="autoplay" muted="" playsinline="" style="display: block;height: 100%;object-fit: cover;object-position: center;">
+                            <video height="100%" loop="loop" muted="" playsinline=""
+                                   style="display: block;height: 100%;object-fit: cover;object-position: center;"
+                                   id="video2">
                                 <source src="assets/img/test.mp4" type="video/mp4">
                             </video>
                             <img src="assets/img/video-bg.png" alt="" class="video-block__img ">
@@ -357,10 +362,25 @@
 <script src="assets/js/js_app.min.js"></script>
 
 
-
-
 <script>
 
+    function videoplay() {
+        document.getElementById('video1').play();
+
+        document.getElementById('video2').play();
+    }
+
+    $(document).ready(function () {
+
+        document.getElementById('btn-trigger').addEventListener('click', () => {
+            videoplay();
+
+            console.log("play");
+        });
+
+
+        $("#btn-trigger").trigger("click");
+    });
 </script>
 
 </body>
