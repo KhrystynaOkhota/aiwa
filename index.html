@@ -306,7 +306,7 @@
 <footer class="footer">
     <div class="container ">
         <div class="row align-center">
-            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 d-flex align-left align-end">
+            <div class="col-xl-5 col-lg-5 col-md-2 col-sm-12 col-xs-12 d-flex align-left align-end">
                 <a href="index.html" class=" logo__wrap align-middle --relative">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="31" viewBox="0 0 80 31" fill="none"
@@ -324,10 +324,10 @@
                     </svg>
                 </a>
 
-                <div class="copyright">© 2023 AiWa. All rights reserved.</div>
+                <div class="copyright d-block d-md-none d-lg-block">© 2023 AiWa. All rights reserved.</div>
             </div>
 
-            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <div class="col-xl-5 col-lg-5 col-md-8 col-sm-12 col-xs-12 text-center">
                 <div class="footer-item">
                     <ul class="menu">
                         <li class="menu-item  current-menu-item">
@@ -353,6 +353,12 @@
                 </ul>
             </div>
         </div>
+
+        <div class="row align-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <div class="copyright d-none d-md-block d-lg-none">© 2023 AiWa. All rights reserved.</div>
+            </div>
+        </div>
     </div>
 </footer>
 
@@ -361,7 +367,6 @@
 
 <script src="assets/js/js_app.min.js"></script>
 
-<img id="img-tag" src="assets/img/test-2.mp4">
 <script>
 
     function videoplay() {
@@ -385,7 +390,7 @@
     function startVideo() {
         if ($('video').length) {
             $('video').each(function () {
-                let th = $(this);
+
                 if ($(window).scrollTop() > 10) {
 
 
