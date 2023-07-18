@@ -370,17 +370,35 @@
         document.getElementById('video2').play();
     }
 
-    (function () {
+    document.getElementById('btn-trigger').addEventListener('click', () => {
+        videoplay();
 
-        document.getElementById('btn-trigger').addEventListener('click', () => {
-            videoplay();
-
-            console.log("play");
-        });
-
+        console.log("play");
+    });
+   /* jQuery(function () {
 
         $("#btn-trigger").trigger("click");
-    })();
+    });
+*/
+
+
+    function startVideo() {
+        if ($('video').length) {
+            $('video').each(function () {
+                let th = $(this);
+                if ($(window).scrollTop() > 10) {
+
+
+                    $("#btn-trigger").trigger("click");
+                }
+            });
+        }
+    }
+
+    startVideo();
+    $(window).on('scroll', function () {
+        startVideo();
+    });
 
 
 </script>
